@@ -103,6 +103,8 @@ Create two separate code chunks that create boxplots of the distribution of Ozon
 
 ```{r Create Boxplots, echo=FALSE, warning=FALSE, fig.align='left', fig.height=4, fig.width=8, fig.cap="Distribution of Ozone Levels by Month in 2018 and 2019"}
 
+epa_data$Month <- factor(epa_data$Month)
+
 OzoneByMonth_2018 <- ggplot(
   epa_data %>%
   filter(Year == "2018")) +
